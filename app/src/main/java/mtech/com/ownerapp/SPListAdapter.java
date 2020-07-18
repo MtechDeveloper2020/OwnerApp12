@@ -3,7 +3,6 @@ package mtech.com.ownerapp;
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,7 +38,6 @@ public class SPListAdapter extends ArrayAdapter<String> {
 //        this.imgid=imgid;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     public View getView(int position, View view, ViewGroup parent){
         LayoutInflater inflater = context.getLayoutInflater();
         View rowView = inflater.inflate(R.layout.splist, null, true);

@@ -1,5 +1,6 @@
 package mtech.com.ownerapp;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -12,11 +13,6 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
-import android.support.annotation.RequiresApi;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,6 +21,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import org.json.JSONObject;
 
@@ -123,7 +123,6 @@ public class VisitorsFragment extends Fragment {
         }
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public View onCreateView(final LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -184,7 +183,7 @@ public class VisitorsFragment extends Fragment {
 //                        AlertDialog dialog = builder.create();
 //                        dialog.show();
 
-                        AlertDialog.Builder alertDialogBuilder = new android.support.v7.app.AlertDialog.Builder(getContext());
+                        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
                         alertDialogBuilder.setMessage("MARK AS ");
                         alertDialogBuilder.setNegativeButton("CORRECT",
                                 new DialogInterface.OnClickListener() {
@@ -201,7 +200,7 @@ public class VisitorsFragment extends Fragment {
                                 });
 
                         alertDialogBuilder.setPositiveButton("INCORRECT", new DialogInterface.OnClickListener() {
-                            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 SrNo = srno.get(position);

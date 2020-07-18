@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,12 +12,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Random;
-
 import mtech.com.ownerapp.DBConnection;
 import mtech.com.ownerapp.LoginActivity;
 import mtech.com.ownerapp.R;
@@ -26,7 +26,8 @@ import mtech.com.ownerapp.SelectionActivity;
 import mtech.com.ownerapp.VehicleMessageService;
 import mtech.com.ownerapp.member.Registration;
 
-public class PinChange extends AppCompatActivity{
+public class PinChange extends AppCompatActivity {
+
     Button generatePin,save;
     EditText editTextPin;
     TextView curPin;
@@ -49,6 +50,7 @@ public class PinChange extends AppCompatActivity{
         curPin=(TextView) findViewById(R.id.curPin);
         new GetLongLat("E").execute();
         generatePin.setOnClickListener(new View.OnClickListener(){
+
             @Override
             public void onClick(View v){
                 Random r = new Random();
@@ -59,13 +61,15 @@ public class PinChange extends AppCompatActivity{
 
         save.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View v) {
+            public void onClick(View v){
                 pin= editTextPin.getText().toString();
                 new GetLongLat("U").execute();
             }
         });
     }
+
     //--------------------------------------------------------------------------------------------------
+
     public class GetLongLat extends AsyncTask<String, String, String> {
         Connection conn;
         ResultSet rs = null, rs1 = null;
@@ -105,8 +109,8 @@ public class PinChange extends AppCompatActivity{
 
                 if(conn == null){
                     ret = "Internet connection Error";
-
                 } else{
+
                     if(flag.equalsIgnoreCase("U")){
 
                         String sql = "update OwnerLoginDetails set Pin=?  where UserId=?";
@@ -148,7 +152,7 @@ public class PinChange extends AppCompatActivity{
                     e.printStackTrace();
                 }
             }
-          else  if (flag.equalsIgnoreCase("E")){
+          else if(flag.equalsIgnoreCase("E")){
                 String s="0000";
                 try {
                     while(rs.next()){
@@ -166,7 +170,6 @@ public class PinChange extends AppCompatActivity{
             Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show();
         }
     }
-
 
 
 //--------------------------------------------------------------------------------------------------

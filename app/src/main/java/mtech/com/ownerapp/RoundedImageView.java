@@ -14,7 +14,7 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-public class RoundedImageView extends ImageView {
+public class RoundedImageView extends androidx.appcompat.widget.AppCompatImageView {
 
 
     public RoundedImageView(Context ctx, AttributeSet attrs) {

@@ -17,7 +17,6 @@ import android.content.SharedPreferences;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,7 +37,6 @@ public class SettingsToggle extends RelativeLayout implements View.OnClickListen
     private ObjectAnimator _oaLeft, _oaRight;
     private String _prefName;
 
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     public SettingsToggle(Context context, AttributeSet attrs) {
         super(context, attrs);
 
@@ -84,7 +82,6 @@ public class SettingsToggle extends RelativeLayout implements View.OnClickListen
         setState();
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     public SettingsToggle(Context context) {
         this(context, null);
     }

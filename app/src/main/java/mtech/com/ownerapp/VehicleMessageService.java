@@ -13,7 +13,6 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Handler;
 import android.os.IBinder;
-import android.support.annotation.RequiresApi;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -132,7 +131,6 @@ public class VehicleMessageService extends Service {
 //            progressDialog.show();
         }
 
-        @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
         @Override
         protected void onPostExecute(String res) {
 //            progressDialog.dismiss();
@@ -172,7 +170,6 @@ public class VehicleMessageService extends Service {
         }
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     private void showName(ResultSet rs, ResultSet rs1, String flag) {
         boolean status = false;
         String SrNo = null, OwnerDetails = null;
@@ -199,7 +196,6 @@ public class VehicleMessageService extends Service {
         }
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     private void notify1() {
 
 

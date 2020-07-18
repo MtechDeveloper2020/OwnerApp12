@@ -6,9 +6,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +16,10 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
+
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -211,7 +212,7 @@ public class AddVehicle extends Fragment {
                   else  if (flag.equalsIgnoreCase("A")){
                         String sql = "DELETE FROM VehicleList WHERE VehicleNumber='"+vnn+"'";
 
-                        Statement  stmt = conn.createStatement();
+                        Statement  stmt   = conn.createStatement();
 
                         int i = stmt.executeUpdate(sql);
                         ret = "" + i;

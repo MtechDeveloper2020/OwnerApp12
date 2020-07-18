@@ -6,8 +6,6 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.AsyncTask;
 import android.os.Build;
-import android.support.annotation.RequiresApi;
-import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,6 +23,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+
+import static androidx.core.content.ContextCompat.getColor;
 
 public class MyListAdapter extends ArrayAdapter<String> {
 
@@ -60,7 +60,6 @@ public class MyListAdapter extends ArrayAdapter<String> {
 
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     public View getView(final int position, View view, ViewGroup parent) {
         LayoutInflater inflater = context.getLayoutInflater();
         View rowView = inflater.inflate(R.layout.mylist, null, true);
@@ -101,7 +100,7 @@ public class MyListAdapter extends ArrayAdapter<String> {
 
         if(!TextUtils.isEmpty(oyp) && oyp!=null) {
             markBtn.setEnabled(false);
-            fadell.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.timestamp));
+            fadell.setBackgroundColor(getColor(getContext(), R.color.timestamp));
             fadell.setEnabled(false);
             imageView.setEnabled(false);
             markBtn.clearAnimation();
