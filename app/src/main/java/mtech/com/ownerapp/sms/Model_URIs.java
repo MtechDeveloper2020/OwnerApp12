@@ -5,7 +5,6 @@ public class Model_URIs {
 	String TransactionLog_URI;
 	String Perform_URI;
 
-	
 	public Model_URIs(){
 
 		//this.TransactionLog_URI = "http://ekyc.m-techinnovations.com/aadhaarAuthenticationAPI/AadhaarAuthenticationService.svc/GenerateOTPForAadhaarAuthenticationService";

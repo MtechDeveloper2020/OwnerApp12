@@ -99,8 +99,7 @@ public class VisitorDetails extends AppCompatActivity {
     public void onResume() {
         super.onResume();
 
-
-    }
+        }
 
     @Override
     public void onPause() {

@@ -28,14 +28,13 @@ public class SPListAdapter extends ArrayAdapter<String> {
                          ArrayList<String> purpose, ArrayList<Bitmap> photo, ArrayList<String> srno){
         super(context, R.layout.splist, maintitle);
 
-
         this.context = context;
         this.maintitle = maintitle;
         this.subtitle = subtitle;
         this.purpose = purpose;
         this.srno = srno;
         this.photo = photo;
-//        this.imgid=imgid;
+//      this.imgid=imgid;
     }
 
     public View getView(int position, View view, ViewGroup parent){
@@ -57,6 +56,7 @@ public class SPListAdapter extends ArrayAdapter<String> {
         }else{
             imageView.setBackgroundResource(R.drawable.profile);
         }
+
         subtitleText.setText("" + purpose.get(position));
 //        enteredAt.setText(""+date.get(position));
 //        purposee.setText(""+purpose.get(position));

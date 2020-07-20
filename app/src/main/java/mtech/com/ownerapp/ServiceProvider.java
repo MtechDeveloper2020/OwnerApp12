@@ -121,6 +121,8 @@ public class ServiceProvider extends Fragment {
         from = new ArrayList<>();
         srno = new ArrayList<>();
         photo = new ArrayList<>();
+
+
         provider = (Spinner) view.findViewById(R.id.provider);
         list = (ListView) view.findViewById(R.id.list);
         Quality = (RadioButton) view.findViewById(R.id.quality);
