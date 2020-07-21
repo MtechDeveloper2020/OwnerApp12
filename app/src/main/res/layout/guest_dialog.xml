@@ -33,8 +33,8 @@
             android:background="@color/lightGray" />
 
         <Button
-            android:id="@+id/textView6"
-            android:layout_width="match_parent"
+            android:id="@+id/oncebtn"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="20sp"
             android:gravity="start"
@@ -50,8 +50,8 @@
             android:background="@color/lightGray" />
 
     <Button
-        android:id="@+id/freq"
-        android:layout_width="match_parent"
+        android:id="@+id/freqbtn"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="20sp"
         android:gravity="start"

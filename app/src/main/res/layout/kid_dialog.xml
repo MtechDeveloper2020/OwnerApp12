@@ -6,6 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:background="@color/white"
+    android:layout_gravity="center"
     android:layout_height="fill_parent">
 
 
@@ -26,38 +27,52 @@
             android:textSize="18sp"
             android:layout_marginBottom="10sp"/>
 
-        <View
-            android:id="@+id/view"
-            android:layout_width="match_parent"
-            android:layout_height="1sp"
-            android:background="@color/lightGray" />
 
-        <Button
+        <TextView
             android:id="@+id/textView6"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:gravity="start"
-            android:padding="20sp"
-            android:text="Allow Once"
+            android:paddingLeft="80sp"
+            android:paddingRight="80sp"
+            android:text="Allow my kid to exit in next"
             android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:layout_gravity="center"
+            android:textSize="38sp" />
 
-        <View
-            android:id="@+id/view2"
-            android:layout_width="match_parent"
-            android:layout_height="1sp"
-            android:background="@color/lightGray" />
-
-    <Button
-        android:id="@+id/freq"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColorHint="#fff"
+        android:layout_marginTop="5sp"
+        android:layout_marginRight="20sp"
+        android:layout_marginBottom="5sp"
+        android:layout_marginLeft="20sp"
+        >
+        <EditText
+            android:id="@+id/hours"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="2 hours"
+            android:inputType="text"
+            android:maxLines="1"
+            android:focusable="false"
+            android:textColor="@color/colorAccent"
+            android:paddingLeft="10dp"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/okbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:padding="20sp"
-        android:gravity="start"
-        android:text="Allow Frequently"
-        android:background="@color/white"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="ok"
+        android:background="@color/colorAccent"
         android:textColor="@color/black"
-        android:textSize="18sp" />
+        android:textSize="26sp" />
 
 </LinearLayout>

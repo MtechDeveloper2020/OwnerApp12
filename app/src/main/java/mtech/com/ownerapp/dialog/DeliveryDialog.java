@@ -9,7 +9,11 @@ import android.widget.Button;
 import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.FragmentManager;
+
 import mtech.com.ownerapp.R;
+import mtech.com.ownerapp.deliverydialog.DeliveryTabbedDialog;
+import mtech.com.ownerapp.dialogoncefreq.TabbedDialog;
 
 public class DeliveryDialog  extends DialogFragment {
     @Nullable
@@ -21,25 +25,29 @@ public class DeliveryDialog  extends DialogFragment {
         oncebtn.setOnClickListener(doneAction);
         Button freq = (Button) view.findViewById(R.id.freqbtn);
         freq.setOnClickListener(freqAction);
-
         return view;
     }
 
-    View.OnClickListener doneAction = new View.OnClickListener() {
+    View.OnClickListener doneAction = new View.OnClickListener(){
 
         @Override
-        public void onClick(View v) {
-            Toast.makeText(getActivity(),"Test",Toast.LENGTH_LONG).show();
+        public void onClick(View v){
+            FragmentManager fm = getActivity().getSupportFragmentManager();
+            DeliveryTabbedDialog custom = new DeliveryTabbedDialog();
+            custom.show(fm,"");
         }
     };
 
-    View.OnClickListener freqAction = new View.OnClickListener() {
+    View.OnClickListener freqAction = new View.OnClickListener(){
 
         @Override
-        public void onClick(View v) {
-            Toast.makeText(getActivity(),"freqAction !",Toast.LENGTH_LONG).show();
+        public void onClick(View v){
+            FragmentManager fm = getActivity().getSupportFragmentManager();
+            DeliveryTabbedDialog custom = new DeliveryTabbedDialog();
+            custom.show(fm,"");
         }
     };
 
 }
+
 
