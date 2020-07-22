@@ -5,11 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentManager;
-
 import mtech.com.ownerapp.R;
 import mtech.com.ownerapp.guestdialog.GuestTabbedDialog;
 
@@ -26,8 +24,8 @@ public class GuestDialog extends DialogFragment {
         freq.setOnClickListener(freqAction);
         return view;
     }
-    View.OnClickListener doneAction = new View.OnClickListener(){
 
+    View.OnClickListener doneAction = new View.OnClickListener(){
         @Override
         public void onClick(View v){
             FragmentManager fm = getActivity().getSupportFragmentManager();
@@ -37,7 +35,6 @@ public class GuestDialog extends DialogFragment {
     };
 
     View.OnClickListener freqAction = new View.OnClickListener(){
-
         @Override
         public void onClick(View v){
             FragmentManager fm = getActivity().getSupportFragmentManager();

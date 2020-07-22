@@ -16,6 +16,7 @@ import mtech.com.ownerapp.R;
 public class TabbedDialog extends DialogFragment {
     TabLayout tabLayout;
     ViewPager viewPager;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater,
